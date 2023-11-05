@@ -42,14 +42,14 @@ command=ip addr | grep 'UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/'
 interval=120
 color=#91E78B
 
-[battery]
-command=python3 battery.py
-interval=10
+#[battery]
+#command=python3 battery.py
+#interval=10
 
-[sound]
-command=python3 sndstat.py 
-interval=once
-signal=5
+#[sound]
+#command=python3 sndstat.py 
+#interval=once
+#signal=5
 
 [lang]
 command=python3 layout.py

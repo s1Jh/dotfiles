@@ -26,6 +26,7 @@ font pango:Fira Code 9
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
 exec systemctl --user restart xdg-desktop-portal-gtk &
+exec --no-startup-id xss-lock -- i3lock > /dev/null &
 exec --no-startup-id nm-applet > /dev/null
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null
 exec --no-startup-id flameshot > /dev/null
@@ -36,6 +37,8 @@ exec --no-startup-id gromit-mpx -k F11 -u F12 > /dev/null
 exec --no-startup-id udiskie --tray --no-automount > /dev/null
 # exec --no-startup-id python3 ~/.local/bin/pape.py > /dev/null
 exec  ln -sf ~/$(find Wallpapers -type f | shuf -n 1) Wallpapers/current && wal -l -i $(realpath ~/Wallpapers/current)
+exec --no-startup-id xfce4-power-manager --daemon > /dev/null &
+exec --no-startup-id volumeicon > /dev/null &
 
 set_from_resource $bg i3wm.color2 #ffffff
 set_from_resource $text i3wm.color7 #ffffff
@@ -50,12 +53,12 @@ set $refresh_i3volstat pkill -SIGRTMIN+5 i3blocks
 set $refresh_i3langstat pkill -SIGRTMIN+6 i3blocks
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3volstat
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3volstat
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3volstat
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3volstat
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3volstat
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3volstat
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3volstat
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d intel_backlight s +10%
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight s 10%-
+#bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d intel_backlight s +10%
+#bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight s 10%-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
