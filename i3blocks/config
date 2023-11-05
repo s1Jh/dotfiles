@@ -1,0 +1,66 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[window]
+command=./winwrap.sh
+interval=persist
+
+[calc]
+full_text=
+command=qalculate-qt
+color=#32c85f
+
+[system]
+full_text=SYSTEM
+command=python3 system.py
+color=#f5af19
+
+[updates]
+command=echo "$(pacman -Qu | wc -l)"
+interval=600
+
+[music]
+command=./musicwrap.sh
+interval=persist
+
+[weather]
+command=curl -Ss 'https://wttr.in?O&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+[ip]
+command=ip addr | grep 'UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1 -d'/'
+interval=120
+color=#91E78B
+
+[battery]
+command=python3 battery.py
+interval=10
+
+[sound]
+command=python3 sndstat.py 
+interval=once
+signal=5
+
+[lang]
+command=python3 layout.py
+interval=once
+signal=6
+
+[time]
+command=date '+%c'
+#command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+
+[separator]
+full_text=
+
