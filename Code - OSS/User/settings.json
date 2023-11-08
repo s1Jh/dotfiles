@@ -1,6 +1,53 @@
 {
     "workbench.colorTheme": "Wal",
-    "qtConfigure.qtDir": "/home/sijh/OpenRGB",
-    "files.autoSave": "afterDelay",
-    "window.zoomLevel": 1-
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "cmake.configureOnOpen": false,
+    "git.openRepositoryInParentFolders": "never",
+    "MATLAB.installPath": "/opt/MATLAB/R2023a_CWL",
+    "MATLAB.telemetry": false,
+    "STM32VSCodeExtension.projectCreator.executablePath": "/usr/bin/stm32cubemx",
+    "STM32VSCodeExtension.productFinder.executablePath": "/usr/bin/stmcufinder",
+    "hediet.vscode-drawio.resizeImages": null,
+    "stm32-for-vscode.openOCDPath": "/home/sijh/.config/Code - OSS/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/openocd/0.12.0-2.1/.content/bin/openocd",
+    "stm32-for-vscode.makePath": "/usr/bin/make",
+    "stm32-for-vscode.armToolchainPath": "/home/sijh/.config/Code - OSS/User/globalStorage/bmd.stm32-for-vscode/@xpack-dev-tools/arm-none-eabi-gcc/12.3.1-1.2.1/.content/bin",
+    "telemetry.telemetryLevel": "off",
+    "cortex-debug.enableTelemetry": false,
+    "goodbye-cubeide.cubeIdePath": "/opt/stm32cubeide",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "cSpell.enabled": true,
+    "cSpell.language": "en,en-GB",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex-shell-escape-recipe",
+            "tools": [
+                "xelatex-shell-escape"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex-shell-escape",
+            "command": "xelatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "editor.minimap.enabled": false
 }
