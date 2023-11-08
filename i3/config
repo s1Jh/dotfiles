@@ -26,7 +26,7 @@ font pango:Fira Code 9
 # screen before suspend. Use loginctl lock-session to lock your screen.
 
 exec systemctl --user restart xdg-desktop-portal-gtk &
-exec --no-startup-id xss-lock -- i3lock > /dev/null &
+exec --no-startup-id xss-lock -- i3lock -i Wallpapers/current > /dev/null &
 exec --no-startup-id nm-applet > /dev/null
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 > /dev/null
 exec --no-startup-id flameshot > /dev/null
