@@ -12,6 +12,7 @@ cmds = {
     " HTOP": "urxvt -e htop &",
     "-----------------------------------------------------------------------------": "",
     " SHUTDOWN": "systemctl poweroff",
+    " HIBERNATE": "systemctl hibernate",
     " RESTART": "systemctl reboot",
     " EXIT": "i3-msg exit"
 }

@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Wal",
+    "workbench.colorTheme": "Default Light Modern",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
@@ -32,22 +32,38 @@
         {
             "name": "xelatex-shell-escape-recipe",
             "tools": [
+                "vlna",
+                "xelatex-shell-escape",
+                "bibtex",
+                "xelatex-shell-escape",
                 "xelatex-shell-escape"
             ]
         }
     ],
     "latex-workshop.latex.tools": [
         {
+            "name": "vlna",
+            "command": "vlna",
+            "args": [
+                "%DOC_EXT%"
+            ]
+        },
+        {
             "name": "xelatex-shell-escape",
             "command": "xelatex",
             "args": [
                 "--shell-escape",
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
                 "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
             ]
         }
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons"
 }
