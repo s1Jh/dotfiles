@@ -28,6 +28,7 @@
     "workbench.startupEditor": "none",
     "cSpell.enabled": true,
     "cSpell.language": "en,en-GB",
+    "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
         {
             "name": "xelatex-shell-escape-recipe",
@@ -35,6 +36,14 @@
                 "vlna",
                 "xelatex-shell-escape",
                 "bibtex",
+                "xelatex-shell-escape",
+                "xelatex-shell-escape"
+            ]
+        },
+        {
+            "name": "xelatex-basic",
+            "tools": [
+                "vlna",
                 "xelatex-shell-escape",
                 "xelatex-shell-escape"
             ]
@@ -65,5 +74,10 @@
         }
     ],
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "debug.disassemblyView.showSourceCode": false,
+    "hexeditor.columnWidth": 13,
+    "hexeditor.showDecodedText": true,
+    "hexeditor.defaultEndianness": "little",
+    "hexeditor.inspectorType": "aside"
 }
