@@ -218,7 +218,7 @@ bar {
 		inactive_workspace $bg $border $text
 	}
     status_command i3blocks
-	font pango:Fira Code, Icons Bold 8
+	font pango:Fira Code, Font Awesome 6 Free Bold 8
 	padding 0px
 }
 
