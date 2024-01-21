@@ -27,7 +27,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.startupEditor": "none",
     "cSpell.enabled": true,
-    "cSpell.language": "en,en-GB",
+    "cSpell.language": "en,en-GB,cs",
     "latex-workshop.latex.recipe.default": "lastUsed",
     "latex-workshop.latex.recipes": [
         {
@@ -79,5 +79,9 @@
     "hexeditor.columnWidth": 13,
     "hexeditor.showDecodedText": true,
     "hexeditor.defaultEndianness": "little",
-    "hexeditor.inspectorType": "aside"
+    "hexeditor.inspectorType": "aside",
+    "cSpell.enableFiletypes": [
+        "ini"
+    ],
+    "cmake.showOptionsMovedNotification": false
 }
